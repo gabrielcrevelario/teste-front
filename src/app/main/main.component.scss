@@ -1,0 +1,30 @@
+
+    div{
+
+        overflow-y:hidden;
+    
+        overflow-x:hidden;
+    }
+    .nav.nav-tabs{
+        margin-left:30%;
+        margin-top:12%;
+        li{
+           a{ color:black;}
+            &:hover{
+            border-bottom: 2px solid blue;
+            
+        }
+        &:active {
+            border-bottom: 2px solid blue;
+        }
+        &:visited{
+            border-bottom: 2px solid blue;
+        }
+        &:after {
+            transition: width .3s;
+        }
+         }
+         
+
+    }
+   
