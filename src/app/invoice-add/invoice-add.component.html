@@ -3,28 +3,49 @@
 
     <span><strong>Adicionar Nota</strong> </span>
   </div> 
+
+  <div *ngIf="usuarioForm.invalid && usuarioForm.touched"class="alert alert-danger">
+    Preencha todos os campos corretamente
+  </div>
+  <form #usuarioForm="ngForm" (ngSubmit)="add(usuarioForm)">
     <label><strong>Loja</strong></label>
-    <input type="text"  class="form-control col-sm-6" placeholder="Razão social, nome fantasia ou CNPJ">
     <div class="row">
-      <div class="d-flex flex-row bd-highlight mb-3" >
-        <div class="col-sm-2">
+      <div class=" col-sx-12 col-sm-8 col-md-8">
+      <input [(ngModel)}="nota.loja" #loja = "ngModel"  class="form-control"type="text"placeholder="Razão social, nome fantasia ou CNPJ" required>
+      <div ngIf="loja.invalid"> Campo Loja Vazio</div>
+    </div>
+    </div>
+    <div class="row oneLine">
+      <div class="col-sx-8 col-sm-6 col-md-2">
           <label><strong> NO DA NOTA </strong></label>
-          <input type="date" class="form-control" placeholder="---">
+          <input type="date" [(ngModel)}="nota.noNota" #noNota = "ngModel" class="form-control" placeholder="---" required>
+        <div ngIf="noNota.invalid"> Campo No Nota Vazio</div>
         </div>
-        <div class="col-sm-2">
+        <div class="col-sx-8  col-sm-6 col-md-2">
           <label><strong>DATA DA NOTA</strong></label>
-          <input type="date" class="form-control" placeholder="---">
+          <input type="date" [(ngModel)}="nota.dataNota" #dataNota  = "ngModel" class="form-control" placeholder="---" required>
+          <div ngIf="dataNota.invalid"> Campo data da nota está Vazio</div>
         </div>  
-        <div class="payment col-sm-2">
+        <div class="payment col-sx-6 col-sm-6 col-md-2">
           <label><strong>FORMA DE PAGAMENTO</strong></label>
-          <select class="custom-select" id="inputGroupSelect01">
-            <option> Selecionar</option>
+          <select class="custom-select" #pagamento = "ngModel"  [(ngModel)}="nota.pagamento" id="inputGroupSelect01">
+            <option *ngFor="let payment of payments"> {{payment}}</option>
           </select>
         </div>
-        <div class="payment col-sm-2">
+        <div class="payment2 col-sx-8  col-sm-6 col-md-2">
           <label><strong>Valor</strong></label>
-          <input prefix="R$" type="number" >
+          <input prefix="R$" #valor = "ngModel" class="custom-select" type="number"[(ngModel)}="nota.valor"  required >
+          <div ngIf="valor.invalid"> Campo valor está Vazio</div>
         </div>
       </div>
-    </div>
+        <div class="row button">
+            <div class="col-sx-8 col-sm-6 col-md-1">
+                <button class="btn btn-light">Cancelar</button>
+            </div>
+            <div class="col-sx-4 col-sm-2 col-md-1">
+                <button [disabled]="!usuarioForm.valid"class="btn btn-primary">Adicionar</button>
+            </div>
+        </div>
+     
+    </form> 
   </div>

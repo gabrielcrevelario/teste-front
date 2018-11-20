@@ -1,0 +1,30 @@
+export interface Cliente {
+  id:String,  
+  nome:String,
+      email:String,
+      cpf:String,
+      endereco:{  
+        tipo:String,
+        logradouro:String,
+        numero:String,
+        complemento:String,
+        bairro:String,
+        cidade:String,
+        estado:String,
+        pais:String
+      },
+      nota: {
+        loja:String,  
+        noNota:String,
+          dataNota:String,
+          formaPagamento:String,
+        valor:String
+      },
+      telefone:{  
+        pais:String,
+        area:String,
+        numero:String
+      },
+      thumb:String,
+      obs:String
+    }

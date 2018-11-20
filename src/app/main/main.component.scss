@@ -1,4 +1,8 @@
-
+.container.main{
+    width: 50%;
+    height: 70%;
+   
+    margin-top: -77;
     div{
 
         overflow-y:hidden;
@@ -6,8 +10,10 @@
         overflow-x:hidden;
     }
     .nav.nav-tabs{
-        margin-left:30%;
-        margin-top:12%;
+        margin-left:11%;
+        margin-top:1%;
+        width: 142%;
+        border:none;
         li{
            a{ color:black;}
             &:hover{
@@ -25,6 +31,9 @@
         }
          }
          
-
+         hr {
+            width: 116%;
+            margin-top: 0rem;
+         }
     }
-   
+}

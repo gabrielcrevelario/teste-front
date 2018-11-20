@@ -1,6 +1,10 @@
-<app-dashboard></app-dashboard>
-<app-main></app-main>
-<div style="text-align:center">
- <fa-icon [icon]="faCoffee"></fa-icon>
-  </div>
-    <button> <i class="fas fa-bug"></i></button>
+
+    <div style="box-shadow: 1px 1px 1px silver">
+        <div *ngIf="detalhesDeClientes">
+           <app-dashboard-detalhes>
+        </div>
+        <div *ngIf="!detalhesDeClientes">
+                <app-dashboard>
+             </div>
+        </app-dashboard></div>
+    <app-main></app-main>

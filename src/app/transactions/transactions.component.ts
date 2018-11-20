@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ClientesServices } from '../ClientesServices/clientes.service';
+import { Saldo} from '../ClientesServices/saldo';
 
 @Component({
   selector: 'app-transactions',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./transactions.component.scss']
 })
 export class TransactionsComponent implements OnInit {
-
-  constructor() { }
+  saldos:Saldo[];
+  constructor(private service:ClientesServices) { }
 
   ngOnInit() {
+  } 
+  if(clienteLoad) {
+    debugger
+    
   }
 
 }

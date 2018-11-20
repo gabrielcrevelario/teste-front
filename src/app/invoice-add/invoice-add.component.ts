@@ -11,4 +11,7 @@ export class InvoiceAddComponent implements OnInit {
   ngOnInit() {
   }
 
+public payments:string[] = ["Dinheiro", "Cartão de Credito", "Cartão de Debito"];
+
+
 }

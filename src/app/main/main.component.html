@@ -1,21 +1,24 @@
+
 <div class="container main" style="margin-top: -72%;">  
     <ul class="nav nav-tabs"  id="myTab" role="tablist">
         <li class="nav-item"><a  routerLink="/" class="nav-link" id="profile-tab" data-toggle="tab" role="tab" aria-controls="profile" aria-selected="false">Transações</a></li>
         <li class="nav-item"> <a  routerLink="/history" class="nav-link" id="profile-tab" data-toggle="tab" role="tab" aria-controls="profile" aria-selected="false">Historico</a></li>
         <li class="nav-item"><a routerLink="/benefits" class="nav-link" id="profile-tab" data-toggle="tab" role="tab" aria-controls="profile" aria-selected="false">Beneficios</a></li>
+        <hr>
+     
     </ul>   
 </div>
-    <div class="container">
-        <router-outlet></router-outlet>
-    </div>
- 
-        
-        <app-invoice-add></app-invoice-add>
-        
-        
-        
-        <app-invoice-create></app-invoice-create>
+<div class="container-fluid">
+    <router-outlet></router-outlet>
+    <hr>
+</div>
+
+
+<app-invoice-add></app-invoice-add>
 
 
 
-        
+<app-invoice-create></app-invoice-create>
+
+
+

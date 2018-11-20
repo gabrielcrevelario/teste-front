@@ -1,9 +1,10 @@
 <div class="user-list container">
-    <table >
-        <tbody>
-          <tr> <td>paulinho.fm@gmail.com</td></tr>
-          <tr><td>Pauo Fernandes Macuso</td></tr>
-          <tr class="last-child"><td>155555555555</td></tr>
-        </tbody>
-    </table>
+ <div>
+
+     <ul nav flex-column>
+         <li class="nav-item"  *ngFor="let cliente of clientes">
+           <button (click)="loadNotaUser(cliente.id)">  {{cliente.email}} <strong> {{cliente.nome}} </strong>{{cliente.cpf}}</button> 
+        </li>
+    </ul>
+</div>
 </div>

@@ -1,7 +1,7 @@
 .transactions.container {
 
     margin-top: 5%;
-
+    max-width: 523px;
     margin-left: 29%;
 table {
     thead {
@@ -9,7 +9,15 @@ table {
                 font-size: 81%;
                 td {
                     color: darkgray;
-                    margin-top:100%} }
+                    margin-top:100%;
+                    text-align: center;
+                }
+                 }
+    }
+
+    tbody {
+      td{  width: 30%;
+        text-align: center;}
     }
 }
 }

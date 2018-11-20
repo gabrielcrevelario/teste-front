@@ -1,6 +1,6 @@
 <div class="transactions container">
 
-  <table class="table table-borderless col-sm-4">
+  <table >
     <thead>
       <tr>
         <td>Saldo</td>
@@ -10,11 +10,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>2.554</td>
-        <td>256.654.256</td>
-        <td>555.555.555.555</td>
-        <td>788.888,00</td>
+      <tr *ngFor="let saldo of saldos">
+        <td>{{saldo.total}}
+        <td>{{saldo.utilizados}} </td>
+        <td> {{saldo.expirados}}</td>
+        <td>{{saldo.utilizados}} </td>
+        <hr>
       </tr>
     </tbody>
   </table>

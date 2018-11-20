@@ -1,29 +1,60 @@
 .invoice-add.container {
+    margin-left: 45%;
     margin-top:10%;
     left: -15%;
     position: relative;
+    max-width: 60%;
+    .button {    flex: 1;
+                justify-content: center;
+                margin-left: -10%;
+                margin-top: 2%;
+        
+        
+        .col-sx-4 {
+            display: inline-block;
+            position: relative;
+            width: 22px;
+            height: 20px;
+            padding-left: 6%;
+            margin-left: 0%;
+        }
+                
+      
+    }
+    
+.row {
+
+
+    
+   .oneLine{ display: inline;
+    flex-direction: row }
+}
     span {
         font-style: italic;
         position: relative;
-        top: 26%;
+        top: 16%;
         left: 3%;
     }
     
-    margin-left: 45%;
-
+form {
+    width: 100%;
+    
 input,select {
     background: transparent;
     border: none;
     border-bottom: 1px solid gray; 
 }
+}
+.invoice-add.container[_ngcontent-c5] {
+    width: 592px;
 
+
+}
 label {
-    font-size: 65%;
+    font-size: 60%;
     font-family: sans-serif;
     margin-left: 1%;
     margin-bottom: 0%;
-    
-
-}
+    }
 
 }
