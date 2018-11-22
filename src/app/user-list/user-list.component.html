@@ -3,7 +3,7 @@
 
      <ul class="list-group">
          <li class="list-group-item"  *ngFor="let cliente of clientes">
-           <button  (click)="loadNotaUser(cliente)">  {{cliente.email}} <strong> {{cliente.nome}} </strong>{{cliente.cpf}}</button> 
+           <button  (click)="loadNotaUser(cliente)">  {{cliente.email}} <div class="row"> <strong> {{cliente.nome}}  </strong></div>{{cliente.cpf}}</button> 
         </li>
     </ul>
 </div>

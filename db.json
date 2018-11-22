@@ -45,8 +45,99 @@
       },
       "thumb": "http://loremflickr.com/g/150/150/face",
       "obs": "No último atendimento, o Sr. Paulo estava bastante irritado com a demora no cadastro das notas fiscais."
-    }
-  ],
+    },
+    {  
+      "codigo":3,
+      "nome":"João Sousa Siqueira",
+      "email":"jaosiq@email.com",
+      "cpf":"34567890123",
+      "endereco": {
+        "tipo": "Avenida",
+        "logradouro": "Vieira Solto",
+        "numero": "23",
+        "complemento": "Bloco 4, Ap 203",
+        "bairro": "Copacabana",
+        "cidade": "Rio de Janeiro",
+        "Estado": "RJ",
+        "Pais": "Brasil"
+      },
+      "telefone": {
+        "pais": "55",
+        "area": "21",
+        "numero": "9876888881"
+      },
+      "thumb": "http://loremflickr.com/g/150/150/face",
+      "obs": "No último atendimento, o Sr. Paulo estava bastante irritado com a demora no cadastro das notas fiscais."
+    },
+    {  
+      "codigo":4,
+      "nome":"Armando Jogada",
+      "email":"armando.player@gmail.com",
+      "cpf":"45678901234",
+      "endereco": {
+        "tipo": "Avenida",
+        "logradouro": "Vieira Solto",
+        "numero": "23",
+        "complemento": "Bloco 4, Ap 203",
+        "bairro": "Copacabana",
+        "cidade": "Rio de Janeiro",
+        "Estado": "RJ",
+        "Pais": "Brasil"
+      },
+      "telefone": {
+        "pais": "55",
+        "area": "21",
+        "numero": "9876888881"
+      },
+      "thumb": "http://loremflickr.com/g/150/150/face",
+      "obs": "No último atendimento, o Sr. Paulo estava bastante irritado com a demora no cadastro das notas fiscais."
+    },
+    {  
+      "codigo":5,
+      "nome":"Jordência Sexta",
+      "email":"jordanfriday@hotmail.com",
+      "cpf":"56789012345",
+      "endereco": {
+        "tipo": "Avenida",
+        "logradouro": "Vieira Solto",
+        "numero": "23",
+        "complemento": "Bloco 4, Ap 203",
+        "bairro": "Copacabana",
+        "cidade": "Rio de Janeiro",
+        "Estado": "RJ",
+        "Pais": "Brasil"
+      },
+      "telefone": {
+        "pais": "55",
+        "area": "21",
+        "numero": "9876888881"
+      },
+      "thumb": "http://loremflickr.com/g/150/150/face",
+      "obs": "No último atendimento, o Sr. Paulo estava bastante irritado com a demora no cadastro das notas fiscais."
+    },
+    {  
+      "codigo":6,
+      "nome":"Kelly Guissa",
+      "email":"salsich@obig.net",
+      "cpf":"67890123456",
+    "endereco": {
+      "tipo": "Avenida",
+      "logradouro": "Vieira Solto",
+      "numero": "23",
+      "complemento": "Bloco 4, Ap 203",
+      "bairro": "Copacabana",
+      "cidade": "Rio de Janeiro",
+      "Estado": "RJ",
+      "Pais": "Brasil"
+    },
+    "telefone": {
+      "pais": "55",
+      "area": "21",
+      "numero": "9876888881"
+    },
+    "thumb": "http://loremflickr.com/g/150/150/face",
+    "obs": "No último atendimento, o Sr. Paulo estava bastante irritado com a demora no cadastro das notas fiscais."
+  }],
   "saldos": [
     {
       "id": "1",

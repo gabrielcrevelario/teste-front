@@ -3,8 +3,130 @@
     overflow-x:hidden;
     background-color: #c3c3c34f;
     margin-left:0%;
-    width: 30%;
+    width: 383px;
     height: 1000px;
     display: flex;
 
+    .voltar {
+        button {
+            margin-left: 42%;
+            margin-top: 381%;
+            color: inherit;
+            background: none;
+            border: none;
+        img {width: 30px;
+        height: 30px; 
+    
+    }}
+
+    }
+    ul {
+        .img { 
+            margin-top: -43%;
+            margin-left: 24%;
+            
+            img{
+                height: 200px;
+                width: 181px;
+                height: 181px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 50%;
+        }
+
+        }
+
+        list-style-type: none;
+    margin-top: 47%;
+    margin-left: -8%;
+    font-family: sans-serif;
+    .perfil {
+        height: 8%;
+        text-align: center;
+        li {
+            span{font-size: 87%;
+                color: #2f2f2f;
+                strong{
+                    font-style: italic;
+                    color: #2f2f2f;
+                    font-weight: bold;
+
+                }
+            }
+        }
+
+
+    }
+.obs {
+    height: 5%;
+    margin-top: 9%; 
+    margin-left:-7%; 
+    li{
+        color: #2f2f2f;
+    font-size: 94%;
+
+        strong{
+            font-size: 91%;
+            color: #2f2f2f;
+
+        }
+    }
+
+
+    }
+.email{
+ 
+    height: 5%;
+    margin-top: 20%;
+    margin-left:-7%; 
+    li{
+        color: #2f2f2f;
+    font-size: 94%;
+
+        strong{
+            font-size: 91%;
+            color: #2f2f2f;
+
+        }
+    }
+
+
 }
+.telefone {
+    height: 5%;
+    margin-top: 9%; 
+    margin-left:-7%; 
+    li{
+        color: #2f2f2f;
+    font-size: 94%;
+
+        strong{
+            font-size: 91%;
+            color: #2f2f2f;
+
+        }
+    }
+}
+.endereco {
+    height: 5%;
+    margin-top: 9%;
+    margin-left:-7%; 
+    li{
+        color: #2f2f2f;
+    font-size: 94%;
+
+        strong{
+            font-size: 91%;
+            color: #2f2f2f;
+
+        }
+    }
+
+}
+
+    
+}
+}
+
+
+

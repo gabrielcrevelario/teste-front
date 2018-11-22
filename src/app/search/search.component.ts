@@ -7,17 +7,19 @@ import { FormsModule,ReactiveFormsModule}   from '@angular/forms';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss'],
-  providers: [ ClientesServices ]
+  styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
+  public termoDaBusca:String;
   public clientes: Observable<Cliente[]>
   constructor(private service: ClientesServices) { }
 
   ngOnInit() {
   }
-  pesquisa(termoDaBusca: string)  {
-   this.service.pesquisa(termoDaBusca);
-   this.service.searchClient(termoDaBusca);
+
+  pesquisa(termoDaBusca: String)  {
+    this.termoDaBusca = termoDaBusca;
+   
+   this.service.buscarCLiente(this.termoDaBusca);
   }
 }

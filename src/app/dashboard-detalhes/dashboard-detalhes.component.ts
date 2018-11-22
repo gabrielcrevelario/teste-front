@@ -4,22 +4,30 @@ import {Cliente} from '../ClientesServices/cliente'
 @Component({
   selector: 'app-dashboard-detalhes',
   templateUrl: './dashboard-detalhes.component.html',
-  styleUrls: ['./dashboard-detalhes.component.scss'],
-  providers:[ClientesServices]
+  styleUrls: ['./dashboard-detalhes.component.scss']
 })
 export class DashboardDetalhesComponent implements OnInit {
- private idUsuario:String;
- private cliente:Cliente;
-  constructor(private services: ClientesServices) { }
+ private clientes: Cliente[];
+ public idUser:String;
+ public back:Boolean;
+  constructor(private service: ClientesServices) { }
 
   ngOnInit() {
-    this.services.cast.subscribe( (dados) => {
+    this.service.cast.subscribe( dados => {
      debugger;
-      this.idUsuario = dados
+      this.idUser = dados
 
-    this.services.getClienteById(this.idUsuario).subscribe(dados => this.cliente = dados)
+    this.service.getClienteByIds(this.idUser).subscribe(dados => { 
+      
+      this.clientes = dados
+      console.log(this.clientes);
+    })
   
      })
+  }
+
+  voltar() {
+    this.service.detalhesCliente(false);
   }
 
 }

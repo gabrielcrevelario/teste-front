@@ -1,41 +1,64 @@
-<div style="width: 400px; height:500;"class="container dashboard col-sm-6 ">
-  <div class="img">
-    
-  </div>
-  <div class="row">
-     <span>
-      {{cliente.nome}}
+<div style="width: 380px; height:500;"class="container dashboard col-sm-6 ">
+  <div class="voltar">
+    <button (click)="voltar()"><img src=".././assets/61022.svg" alt=""></button>
+
+  </div> 
+  <ul  *ngFor="let cliente of clientes">
+    <div class="img">
+      <img src="../../assets/george-clooney.jpg" alt="">
+    </div>
+<div class="perfil">
+  <li >
+    <span>
+      <strong>{{cliente.nome}}</strong> {{idUser}}
     </span>
-  </div>
-<hr>
-  <div class="row">
-     <span>
+    
+  </li>
+  <li >
+    <span>
       CPF: {{cliente.cpf}}. Code: 0001
     </span>
-
+    
+  </li>
   </div>
-<hr>
-  <div class="row">
-     <span><strong>E-MAIL</strong></span>
-     <span>{{cliente.email}}</span>
-  </div>
-<hr>
-  <div class="row">
-     <span><strong>TELEFONE</strong></span>
-     <span>{{cliente.telefone.pais}}, {{cliente.telefone.area}},{{cliente.telefone.numero}}</span>
-  </div>
-<div class="row">
-   <span>
-    <strong>ENDEREÇO</strong>
-  </span>
-   <span>
-  {{cliente.tipo}},
-  {{cliente.logradouro}},
-  {{cliente.numero}},
-  {{cliente.complement}},
-  {{cliente.bairro}},
-  {{cliente.cidade}},
-  {{cliente.Estado}}
-  </span>
+<div class="obs">
+  <li  ><strong> OBSERVAÇÕES IMPORTANTES</strong></li>
+<li >
+  {{cliente.obs}}
+</li>
 </div>
+
+
+<div class="email">
+  <li >
+    <span><strong>E-MAIL</strong></span>
+  </li>
+  <li >
+     <span>{{cliente.email}}</span>
+  </li>
+</div>
+<div class="telefone">
+
+  <li >
+    <span><strong>TELEFONE</strong></span>
+  </li>
+  <li >
+    <span>{{cliente.telefone.pais}} {{cliente.telefone.area}}{{cliente.telefone.numero}}</span> 
+  </li>
+</div>
+  <div class="endereco">
+
+    <li >
+      <span>
+        <strong>ENDEREÇO</strong>
+      </span>
+    </li>
+    
+    
+    <li >  {{cliente.endereco.tipo}}{{cliente.endereco.logradouro}} {{cliente.endereco.numero}} {{cliente.endereco.complement}}</li>
+    <li >  {{cliente.endereco.bairro}}{{cliente.endereco.cidade}}{{cliente.endereco.Estado}}</li>
+  </div>
+    
+  
+</ul>
 </div>

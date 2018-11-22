@@ -15,19 +15,23 @@ export class AppComponent {
   constructor(private service: ClientesServices) {}
 
   ngOnInit() {
+    this.service.cast3.subscribe(bool => 
+      this.detalhesDeClientes = bool
+    )
+
     this.service.cast.subscribe(
 
     (idUser) => {
       this.idUser = idUser;
       this.service.getClienteById(this.idUser).subscribe(
         (dados) => {
-          console.log(dados);
+       
           this.cliente = dados
         
-          if(this.cliente !== null) {
+          if(this.idUser !== "0") {
             this.detalhesDeClientes = true;
           } else {
-            this.detalhesDeClientes = true;
+            this.detalhesDeClientes = false;
           }
         
         
@@ -37,7 +41,4 @@ export class AppComponent {
   )
 })}
 
-  voltar() {
-    this.detalhesDeClientes = false;
-  }
 }

@@ -12,6 +12,7 @@ export class InvoiceAddComponent implements OnInit {
   public nota:Nota
   public notas:Nota[];
   public idUser:String;
+  public sucess:boolean = false;
   constructor(private service:ClientesServices) { }
 
   ngOnInit() {
@@ -21,14 +22,22 @@ export class InvoiceAddComponent implements OnInit {
       this.notas = dados)}
     )
   }
-
+  fechar() {
+    this.sucess = false;
+  }
   salvar(form) {
+    this.sucess = true;
     debugger
     this.nota = form;
     let id = this.notas.length + 1;
     this.nota.id = id.toString()
     this.nota.usuario = this.idUser;
+     
     this.service.createNota(this.nota);
+  }
+  clear(form) {
+    form = '';
+    this.nota = form;
   }
 public payments:string[] = ["Dinheiro", "Cartão de Credito", "Cartão de Debito"];
 

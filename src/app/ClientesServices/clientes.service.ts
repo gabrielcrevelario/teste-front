@@ -17,14 +17,15 @@ export class ClientesServices {
  
     cli = new BehaviorSubject<any>("0");
     not = new BehaviorSubject<any>("0");
-    search = new BehaviorSubject<any>("");
+    bool = new BehaviorSubject<boolean>(false);
+    pesquisar = new BehaviorSubject<any>("a");
     cast = this.cli.asObservable();
-    cast2 = this.search.asObservable();
-    cast3 = this.search.asObservable();
+    pes = this.pesquisar.asObservable();
+    cast3 = this.bool.asObservable();
 
     constructor(private http: HttpClient) {}
      cliente: Cliente;
-      carregarDetalhesDeClientes = new EventEmitter<any>();
+      
      clienteDetail = new EventEmitter<Boolean>();
     private  URI:string = "http://localhost:3000";
     list() {
@@ -38,6 +39,9 @@ export class ClientesServices {
     getClienteById(idCliente: String) {
        return this.http.get<Cliente>(this.URI + "/clientes?id="+ idCliente)
     }
+    getClienteByIds(idCliente: String) {
+        return this.http.get<Cliente[]>(this.URI + "/clientes?id="+ idCliente)
+     }
     getSaldoByIdUsuario(idUsuario: String) {
         
         return this.http.get<Saldo[]>(this.URI+"/saldos?usuario="+idUsuario)
@@ -56,13 +60,16 @@ export class ClientesServices {
             this.cli.next(clickCliente);
 
         }
+        detalhesCliente(booleano) {
+            this.bool.next(booleano);
+        }
         transferDatesforNota(notaList) {
             this.not.next(notaList);
         }
 
 
-        searchClient(searchCliente) {
-            this.search.next(searchCliente);
+        buscarCLiente(termoDeBusca) {
+            this.pesquisar.next(termoDeBusca);
 
         }
    
@@ -71,13 +78,13 @@ export class ClientesServices {
         }
         createNota(nota:Nota) {
             debugger
-            return this.http.post<Nota>(`${this.URI}/notas`, nota);
+            return this.http.post<Nota>(`${this.URI}/notas`,JSON.stringify({nota}));
         }
 
 
-        pesquisa(termo:string){
-        
-        return this.http.get<Cliente[]>(this.URI + "/clientes?email_like=" + termo) 
+        pesquisa(termo:String){
+        debugger
+        return this.http.get<Cliente[]>(`${this.URI}/clientes?email_like=${termo}`) 
        
         }
 

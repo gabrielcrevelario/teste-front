@@ -3,6 +3,19 @@
     height: 70%;
    
     margin-top: -77;
+    .fidelidade {
+            margin-left: 14%;
+            display: block;
+            margin-top: -66%;
+            height: 70px;
+            font-size: 170%;
+            font-family: sans-serif;
+            font-weight: bold;
+            hr {
+                width: 176%;
+                margin-left: -32%;
+            }
+    }
     div{
 
         overflow-y:hidden;
@@ -34,6 +47,7 @@
          hr {
             width: 116%;
             margin-top: 0rem;
+            margin-left: 4%;
          }
     }
 }

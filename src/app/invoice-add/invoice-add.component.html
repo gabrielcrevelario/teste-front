@@ -3,41 +3,46 @@
 
     <span><strong>Adicionar Nota</strong> </span>
   </div> 
-
+  <div *ngIf="sucess === true"class="alert alert-success" role="alert">
+     Dado adicionado com sucesso!
+     <button type="button" class="close" (click)="fechar()"data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
 
   <form #f="ngForm" (ngSubmit)="salvar(f.value)">
     <label><strong>Loja</strong></label>
     <div class="row">
-      <div class=" col-sx-12 col-sm-8 col-md-8">
+      <div class=" col-sx-12 col-sm-12 col-md-12">
       <input name="loja"   ngModel class="form-control"type="text"placeholder="Razão social, nome fantasia ou CNPJ" required>
     </div>
     </div>
     <div class="row oneLine">
-      <div class="col-sx-8 col-sm-6 col-md-2">
+      <div class="col-sx-4 col-sm-3 col-md-3">
           <label><strong> NO DA NOTA </strong></label>
           <input name="noNota" type="text" ngModel class="form-control" placeholder="---" required>
        </div>
-          <div class="col-sx-8  col-sm-6 col-md-2">
+          <div class="col-sx-4  col-sm-3 col-md-3">
           <label><strong>DATA DA NOTA</strong></label>
           <input name="dataNota"type="date" ngModel class="form-control" placeholder="---" required>
         </div>
-        <div class="payment col-sx-6 col-sm-6 col-md-2">
+        <div class="payment col-sx-4 col-sm-3 col-md-3">
           <label><strong>FORMA DE PAGAMENTO</strong></label>
-          <select name="formaPagamento" class="custom-select" ngModel id="inputGroupSelect01">
+          <select style=" margin-top: -15%" name="formaPagamento" class="custom-select" ngModel id="inputGroupSelect01">
             <option *ngFor="let payment of payments"> {{payment}}</option>
           </select>
         </div>
-        <div class="payment2 col-sx-8  col-sm-6 col-md-2">
+        <div class="payment2 col-sx-4  col-sm-3 col-md-3">
           <label><strong>Valor</strong></label>
           <input name="valor"ngModel prefix="R$"  class="custom-select" type="text"  required >
         </div>
         </div>
         <div class="row button">
             <div class="col-sx-8 col-sm-6 col-md-1">
-                <button class="btn btn-light">Cancelar</button>
+                <button  [disabled]="f.invalid" class="btn btn-light">Cancelar</button>
             </div>
             <div class="col-sx-4 col-sm-2 col-md-1">
-                <button class="btn btn-primary" >Adicionar</button>
+                <button [disabled]="f.invalid"class="btn btn-primary" >Adicionar</button>
             </div>
         </div>
      

@@ -16,17 +16,19 @@ export class UserListComponent implements OnInit {
   constructor(private service: ClientesServices) { }
 
   ngOnInit() {
-     this.service.list().subscribe(dados => this.clientes = dados);
+    this.service.list().subscribe(dados => this.clientes = dados);
+    this.service.pes.subscribe((dados) => {
+    debugger
+      this.termoDaBusca = dados;
+      this.service.pesquisa(this.termoDaBusca).subscribe(
+        dados => this.clientes = dados)
+        /*if(this.termoDaBusca.trim() === "" || this.termoDaBusca === null ) {
+          this.service.list().subscribe(dados => this.clientes = dados);
+        } else {
+          return this.clientes;
+        }*/
     
-    this.service.cast2.subscribe(
-       (termo) => { this.termoDaBusca = termo;
-        this.service.pesquisa(this.termoDaBusca).subscribe(
-          dados => this.clientes = dados
-        )
-      if (this.termoDaBusca === "") {
-        this.service.list().subscribe(dados => this.clientes = dados);
-      }
-       })
+      })
   }
 
 

@@ -22,13 +22,16 @@
       
     }
     
-.row {
+
 
 
     
-   .oneLine{ display: inline;
-    flex-direction: row }
+   .row.oneLine{ 
+       display: flex;
+
+        margin-top: 4%!important;
 }
+
     span {
         font-style: italic;
         position: relative;
@@ -51,10 +54,17 @@ input,select {
 
 }
 label {
-    font-size: 60%;
+ 
     font-family: sans-serif;
-    margin-left: 1%;
     margin-bottom: 0%;
+    margin-left: 3%;
+    margin-top: 1%;
+    color: #000000ab;
+    font-size: 83%;
+    }
+    .row.button {
+    justify-content: flex-end;
+    width: 102%;
     }
 
 }

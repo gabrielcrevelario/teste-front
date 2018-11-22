@@ -11,6 +11,18 @@
    [(ngModel)]="nota.dataNota"
    [(ngModel)] ="nota.noNota"
 -->
+<div *ngIf="sucess === true"class="alert alert-success" role="alert">
+ Notas foram salvas com sucesso!
+  <button type="button" class="close" (click)="fecharSave()"data-dismiss="alert" aria-label="Close">
+     <span aria-hidden="true">&times;</span>
+   </button>
+ </div>
+ <div *ngIf="deleted=== true"class="alert alert-success" role="alert">
+  Notas foram deletadas com sucesso!
+   <button type="button" class="close" (click)="fecharDelete()"data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
 <table class="table table-bordered col-sm-6">
     <thead>
       <tr>
@@ -23,22 +35,22 @@
     </thead>
     <tbody>
         <tr *ngFor="let nota of notas" >
-            <td > {{ nota.noNota}}</td>
-            <td> {{ nota.dataNota}}</td>
-            <td> {{ nota.dataNota}}</td>
-            <td> {{ nota.valor}} </td> 
-            <button  style="background:none; border:none!important;    margin-left: -74%;" (click)="mostrarLista()"> <img style="height:30px; width:30px;" src="../../assets/vertical_three_points_580637.png"></button>  
+            <td ngModel  > {{ nota.noNota}}</td>
+            <td ngModel  > {{ nota.dataNota}}</td>
+            <td ngModel  > {{ nota.dataNota}}</td>
+            <td ngModel> {{nota.valor}} </td> 
+            <button  style="background:none; border:none!important; margin-left: -74%;" (click)="mostrarLista()"> <img style="height:30px; width:30px;" src="../../assets/vertical_three_points_580637.png"></button>  
         </tr>
     </tbody>
   </table>
-  <div *ngIf="mostrar">
+  <div *ngIf="mostrar()">
     <ul class="list-group col-sx-4 col-sm-4 col-sm-3">
-      <li *ngIf="marcador === true" class="list-group-item"><button class="bot" (click)="marcar(nota)">Marcar</button></li>
-      <li *ngIf="marcador === false"  class="list-group-item"><button  class="bot" (click)="desmarcar(nota)">Desmarcar</button></li>
+      <li  class="list-group-item"><button class="bot" (click)="marcar(nota)">Marcar</button></li>
+      <li  class="list-group-item"><button  class="bot" (click)="desmarcar(nota)">Desmarcar</button></li>
     </ul>
   </div>
   <div class="row reverse container">
-    <button class="btn btn-primary col-sx-4 col-sm-3 col-md-2" (click)="salvar()" >Salvar</button>
-    <button class="btn btn-white col-sx-4 col-sm-3 col-md-2" (click)="deletarNota()">Remover</button>
+    <button [disabled] ="nota.invalid" class="btn btn-primary col-sx-4 col-sm-3 col-md-2" (click)="salvar()" >Salvar</button>
+    <button [disabled] ="nota.invalid" style="margin-left: 3%;" class="btn btn-white col-sx-4 col-sm-3 col-md-2" (click)="deletarNota()">Remover</button>
   </div>
 </div>
