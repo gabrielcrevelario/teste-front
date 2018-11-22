@@ -1,6 +1,7 @@
 {
   "clientes": [
-    { "id": "1",
+    {
+      "id": "1",
       "nome": "Paulo Santos de Almeida",
       "email": "paulo.santos@email.com",
       "cpf": "02341233409",
@@ -13,13 +14,6 @@
         "cidade": "Rio de Janeiro",
         "Estado": "RJ",
         "Pais": "Brasil"
-      },
-      "nota": {
-        "loja": "ricardo eletro",
-        "noNota": "58877522",
-        "dataNota": "21/03/2018",
-        "formaPagamento": "cartão de credito",
-        "valor": "55.66"
       },
       "telefone": {
         "pais": "55",
@@ -44,13 +38,6 @@
         "Estado": "RJ",
         "Pais": "Brasil"
       },
-      "nota": {
-        "loja": "Casas bahia",
-        "noNota": "5555555",
-        "dataNota": "21/03/2018",
-        "formaPagamento": "cartão de credito",
-        "valor": "55.66"
-      },
       "telefone": {
         "pais": "55",
         "area": "21",
@@ -62,10 +49,45 @@
   ],
   "saldos": [
     {
+      "id": "1",
       "total": "189247.73",
       "usuario": "1",
       "utilizados": "109000",
       "expirados": "78000"
+    },
+    {
+      "id": "2",
+      "total": "5555555",
+      "usuario": "2",
+      "utilizados": "8778888",
+      "expirados": "78000"
+    }
+  ],
+  "notas": [
+    {
+      "id": "1",
+      "loja": "ricardo eletro",
+      "noNota": "58877522",
+      "dataNota": "21/03/2018",
+      "formaPagamento": "cartão de credito",
+      "valor": "55.66",
+      "usuario": "1"
+    },
+    {
+      "id": "1",
+      "loja": "NerdStore a maior loja nerd do brasil",
+      "noNota": "58877522",
+      "dataNota": "21/03/2017",
+      "formaPagamento": "dinehiro",
+      "usuario": "1"
+    },
+    {
+      "loja": "Casas bahia",
+      "noNota": "55557885",
+      "dataNota": "21/03/2018",
+      "formaPagamento": "cartão de debito",
+      "valor": "55.66",
+      "usuario": "2"
     }
   ]
 }

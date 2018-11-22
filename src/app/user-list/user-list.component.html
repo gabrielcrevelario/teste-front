@@ -1,9 +1,9 @@
 <div class="user-list container">
  <div>
 
-     <ul nav flex-column>
-         <li class="nav-item"  *ngFor="let cliente of clientes">
-           <button (click)="loadNotaUser(cliente.id)">  {{cliente.email}} <strong> {{cliente.nome}} </strong>{{cliente.cpf}}</button> 
+     <ul class="list-group">
+         <li class="list-group-item"  *ngFor="let cliente of clientes">
+           <button  (click)="loadNotaUser(cliente)">  {{cliente.email}} <strong> {{cliente.nome}} </strong>{{cliente.cpf}}</button> 
         </li>
     </ul>
 </div>

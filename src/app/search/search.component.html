@@ -1,15 +1,15 @@
 <div class="container search">
    <div class="form-row">
     <div class="form-group col-sx-10 col-sm-8 col-md-10">
-        <input type="search" class="form-control"class="form-control">
-    </div>      
+        <input type="text"  [ngModel]="termoDaPesquisa" class="form-control"   placeholder="Pesquise por Cliente..."  #termoDaPesquisa>
+    </div>
+       
     <div class="form-group col-sx-4 col-sm-4 col-md-2"> 
-        <button class="btn-secondary">
+        <button class="btn-secondary"  (click)="pesquisa(termoDaPesquisa.value)">
             <i class="fas fa-search">
-                <img src="../../assets/158241d2079a635fb0cae49accb56da5--cone-de-lupa-by-vexels.png">
+                <img src="../../assets/25313.svg">
             </i>
         </button>
     </div>
-    
-</div>
+</div> 
 </div>

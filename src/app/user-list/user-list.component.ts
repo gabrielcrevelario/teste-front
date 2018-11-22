@@ -9,16 +9,29 @@ import { Cliente } from '../ClientesServices/cliente';
 })
 export class UserListComponent implements OnInit {
   clientes: Cliente[];
-  
+  cliente:Cliente;
+ public clienteId:String;
+  public termoDaBusca:any;
   
   constructor(private service: ClientesServices) { }
 
   ngOnInit() {
-    this.service.list().subscribe(dados => this.clientes = dados);
+     this.service.list().subscribe(dados => this.clientes = dados);
+    
+    this.service.cast2.subscribe(
+       (termo) => { this.termoDaBusca = termo;
+        this.service.pesquisa(this.termoDaBusca).subscribe(
+          dados => this.clientes = dados
+        )
+      if (this.termoDaBusca === "") {
+        this.service.list().subscribe(dados => this.clientes = dados);
+      }
+       })
   }
-  loadNotaUser(clienteId:String) {
-    this.service.getClienteById(clienteId).subscribe(dado =>this.service.cliente = dado);
-    this.service.clienteLoad();
- 
-}
+
+
+  loadNotaUser(cliente:Cliente){
+    this.cliente = cliente;
+   this.service.loadInformationClient(this.cliente.id);
+  }
 }

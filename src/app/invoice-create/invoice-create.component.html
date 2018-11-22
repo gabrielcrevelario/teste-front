@@ -5,6 +5,12 @@
   <div class="row">
 <span><strong>Você precisa confirmar o cadastro dessa lista de notas </strong></span>
 </div>  
+<!--
+  [(ngModel)] ="nota.loja"
+   [(ngModel)] ="nota.dataNota"
+   [(ngModel)]="nota.dataNota"
+   [(ngModel)] ="nota.noNota"
+-->
 <table class="table table-bordered col-sm-6">
     <thead>
       <tr>
@@ -16,13 +22,23 @@
     </tr> 
     </thead>
     <tbody>
-        <tr > 
-          <td>teste</td>
-          <td>teste</td>
-          <td>teste</td>
-          <td>teste</td>
-          <td>teste</td>
+        <tr *ngFor="let nota of notas" >
+            <td > {{ nota.noNota}}</td>
+            <td> {{ nota.dataNota}}</td>
+            <td> {{ nota.dataNota}}</td>
+            <td> {{ nota.valor}} </td> 
+            <button  style="background:none; border:none!important;    margin-left: -74%;" (click)="mostrarLista()"> <img style="height:30px; width:30px;" src="../../assets/vertical_three_points_580637.png"></button>  
         </tr>
     </tbody>
   </table>
+  <div *ngIf="mostrar">
+    <ul class="list-group col-sx-4 col-sm-4 col-sm-3">
+      <li *ngIf="marcador === true" class="list-group-item"><button class="bot" (click)="marcar(nota)">Marcar</button></li>
+      <li *ngIf="marcador === false"  class="list-group-item"><button  class="bot" (click)="desmarcar(nota)">Desmarcar</button></li>
+    </ul>
+  </div>
+  <div class="row reverse container">
+    <button class="btn btn-primary col-sx-4 col-sm-3 col-md-2" (click)="salvar()" >Salvar</button>
+    <button class="btn btn-white col-sx-4 col-sm-3 col-md-2" (click)="deletarNota()">Remover</button>
+  </div>
 </div>

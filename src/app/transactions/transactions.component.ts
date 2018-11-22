@@ -8,14 +8,18 @@ import { Saldo} from '../ClientesServices/saldo';
   styleUrls: ['./transactions.component.scss']
 })
 export class TransactionsComponent implements OnInit {
-  saldos:Saldo[];
+  public saldos:Saldo[];
+  public idUser: String;
+  public getSaldo 
   constructor(private service:ClientesServices) { }
 
   ngOnInit() {
-  } 
-  if(clienteLoad) {
-    debugger
-    
-  }
+        this.service.cast.subscribe((idUser) => {
+          this.idUser = idUser;
+          
+      this.service.getSaldoByIdUsuario(this.idUser).subscribe( dados => this.saldos = dados);})
 
+
+
+}
 }

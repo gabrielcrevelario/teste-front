@@ -1,0 +1,41 @@
+<div style="width: 400px; height:500;"class="container dashboard col-sm-6 ">
+  <div class="img">
+    
+  </div>
+  <div class="row">
+     <span>
+      {{cliente.nome}}
+    </span>
+  </div>
+<hr>
+  <div class="row">
+     <span>
+      CPF: {{cliente.cpf}}. Code: 0001
+    </span>
+
+  </div>
+<hr>
+  <div class="row">
+     <span><strong>E-MAIL</strong></span>
+     <span>{{cliente.email}}</span>
+  </div>
+<hr>
+  <div class="row">
+     <span><strong>TELEFONE</strong></span>
+     <span>{{cliente.telefone.pais}}, {{cliente.telefone.area}},{{cliente.telefone.numero}}</span>
+  </div>
+<div class="row">
+   <span>
+    <strong>ENDEREÇO</strong>
+  </span>
+   <span>
+  {{cliente.tipo}},
+  {{cliente.logradouro}},
+  {{cliente.numero}},
+  {{cliente.complement}},
+  {{cliente.bairro}},
+  {{cliente.cidade}},
+  {{cliente.Estado}}
+  </span>
+</div>
+</div>

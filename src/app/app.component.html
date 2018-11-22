@@ -1,10 +1,15 @@
 
     <div style="box-shadow: 1px 1px 1px silver">
-        <div *ngIf="detalhesDeClientes">
-           <app-dashboard-detalhes>
-        </div>
-        <div *ngIf="!detalhesDeClientes">
-                <app-dashboard>
-             </div>
-        </app-dashboard></div>
+  
+  <div >
+
+            <app-dashboard>
+                
+            </app-dashboard>
+        </div>    
+       <!-- <div class="detalhes" *ngIf="detalhesDeClientes === true">
+            <app-dashboard-detalhes></app-dashboard-detalhes>
+        <button><img src=".././assets/61022.svg" alt=""></button>
+        </div>-->
     <app-main></app-main>
+</div>

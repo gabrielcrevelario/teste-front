@@ -11,12 +11,13 @@ import { HistoryComponent } from './history/history.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { SearchComponent } from './search/search.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import {DashboardDashboardDetalhesComponent } from './dashboardDetalhes/dashboard-detalhes.component';
 import { MainComponent } from './main/main.component';
 import { routing } from './app-routing';
 import { NgxCurrencyModule } from "ngx-currency";
 import { FidelityComponent } from './fidelity/fidelity.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule}   from '@angular/forms';
+import { DashboardDetalhesComponent } from './dashboard-detalhes/dashboard-detalhes.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,9 +29,9 @@ import { HttpClientModule } from '@angular/common/http';
     UserListComponent,
     SearchComponent,
     DashboardComponent,
-    DashboardDashboardDetalhesComponent,
     MainComponent,
-    FidelityComponent
+    FidelityComponent,
+    DashboardDetalhesComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +39,9 @@ import { HttpClientModule } from '@angular/common/http';
     FontAwesomeModule,
     routing,
     NgxCurrencyModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

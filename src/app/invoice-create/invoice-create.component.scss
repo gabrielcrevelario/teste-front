@@ -13,7 +13,7 @@
         }
 
         table {
-                width: 500px;
+                width: 600px;
                 
                 thead {
                         background-color:ghostwhite;
@@ -23,13 +23,69 @@
                         }
                         }
                 }
-                tbody {
+                tbody { .tr1{
+                        button {
+                                border: none;
+                                background:none;
+                                border: none;
+                                 margin-left: -80%;
+                                 margin-top: 15%;
+                        img {
+                                 width: 30px;
+                                 height: 30px;}
+
+                        }
                         td {
                                 border: 1px soli ghostwhite;
                                 font-size: 73%;
+
+                             
+                        }}
+                        .tr2 {
+                                opacity: 0.5;
+                                button {
+                                        border: none;
+                                        background:none;
+                                        border: none;
+                                         margin-left: -80%;
+                                         margin-top: 15%;
+                                img {
+                                         width: 30px;
+                                         height: 30px;}
+        
+                                }
+                                td {
+                                        border: 1px soli ghostwhite;
+                                        font-size: 73%;
+        
+                                     
+                                }}
+                           
+                                
                         }
-                        }
+
+                        
         }
 
 
+        div{  ul {  display: flex;
+                flex-direction: column;
+                padding-left: 86px;
+                margin-bottom: 0;
+                margin-top: -15%;
+                margin-left: 51%;
+                li {
+                        font-family: sans-serif;
+             
+                        font-style: initial;
+
+                        button.bot {
+                                border: none;
+                                background:none;
+                                border: none;
+                        
+                                 
+                        }
+                    }
+                }}
 }
