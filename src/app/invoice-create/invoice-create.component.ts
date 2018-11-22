@@ -17,6 +17,7 @@ export class InvoiceCreateComponent implements OnInit {
  public notaAfetadas:Nota[];
  public mostrar:Boolean;
  public idUser: string;
+ public notasMock:any[];
  public btnSalvar:Boolean = false;
   constructor(public service:ClientesServices) { }
 
@@ -24,6 +25,18 @@ export class InvoiceCreateComponent implements OnInit {
     this.service.cast.subscribe((idUser:string) =>{
       this.idUser = idUser; 
       debugger
+      if(this.idUser !== "0") {
+        this.notasMock = [{
+          noNota:"5555",
+          dataNota:"05555",
+          valor:"55,66"
+        },{
+          noNota:"566666",
+          dataNota:"888888",
+          valor:"55,66"
+        }]
+      }
+
       this.service.getNotasByUser(this.idUser).subscribe(
         (dados) => {this.notas = dados
         
@@ -32,6 +45,8 @@ export class InvoiceCreateComponent implements OnInit {
       
     }
   )}
+
+
   disable();
 
 disable() {
