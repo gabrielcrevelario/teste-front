@@ -2,9 +2,9 @@
     
     margin-left: -140%;
     margin-top: 28%;
-ul {
+ul {    margin-left: -22%;
     li {
-        margin-left: 71%;
+        margin-left: 80%;
     width: 123%;
     background-color: #eaeaea4a;
     border: none;
@@ -23,5 +23,16 @@ ul {
         font-size: 129%;
     }
     }
+}
+.user-list.container[_ngcontent-c7] ul[_ngcontent-c7] li[_ngcontent-c7] button[_ngcontent-c7] {
+   
+    border: none;
+    background: none;
+    font-family: sans-serif;
+    font-style: normal;
+    border-bottom: silver 2px;
+    color: #888787;
+    margin-top: 6%;
+    font-size: 129%;
 }
 }
