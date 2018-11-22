@@ -12,6 +12,7 @@ export class InvoiceAddComponent implements OnInit {
   public nota:Nota
   public notas:Nota[];
   public idUser:String;
+  public error:boolean = false;
   public sucess:boolean = false;
   constructor(private service:ClientesServices) { }
 
@@ -24,6 +25,7 @@ export class InvoiceAddComponent implements OnInit {
   }
   fechar() {
     this.sucess = false;
+
   }
   salvar(form) {
     this.sucess = true;
@@ -32,7 +34,7 @@ export class InvoiceAddComponent implements OnInit {
     let id = this.notas.length + 1;
     this.nota.id = id.toString()
     this.nota.usuario = this.idUser;
-     
+   
     this.service.createNota(this.nota);
   }
   clear(form) {

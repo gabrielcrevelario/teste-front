@@ -25,9 +25,9 @@ export class InvoiceCreateComponent implements OnInit {
       this.idUser = idUser; 
       debugger
       this.service.getNotasByUser(this.idUser).subscribe(
-        dados => this.notas = dados
+        (dados) => {this.notas = dados
         
-        
+        console.log(this.notas)}
       )
       
     }

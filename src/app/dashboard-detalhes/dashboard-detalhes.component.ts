@@ -28,6 +28,7 @@ export class DashboardDetalhesComponent implements OnInit {
 
   voltar() {
     this.service.detalhesCliente(false);
+    this.service.loadInformationClient("0");
   }
 
 }

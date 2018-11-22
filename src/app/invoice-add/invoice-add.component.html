@@ -9,7 +9,8 @@
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
-
+    
+   
   <form #f="ngForm" (ngSubmit)="salvar(f.value)">
     <label><strong>Loja</strong></label>
     <div class="row">
@@ -39,10 +40,10 @@
         </div>
         <div class="row button">
             <div class="col-sx-8 col-sm-6 col-md-1">
-                <button  [disabled]="f.invalid" class="btn btn-light">Cancelar</button>
+                <button    [disabled]="f.invalid" class="btn btn-light">Cancelar</button>
             </div>
             <div class="col-sx-4 col-sm-2 col-md-1">
-                <button [disabled]="f.invalid"class="btn btn-primary" >Adicionar</button>
+                <button  [disabled]="f.invalid"class="btn btn-primary" >Adicionar</button>
             </div>
         </div>
      

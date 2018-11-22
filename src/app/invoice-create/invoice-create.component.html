@@ -35,9 +35,9 @@
     </thead>
     <tbody>
         <tr *ngFor="let nota of notas" >
-            <td ngModel  > {{ nota.noNota}}</td>
-            <td ngModel  > {{ nota.dataNota}}</td>
-            <td ngModel  > {{ nota.dataNota}}</td>
+            <td ngModel> {{ nota.noNota}}</td>
+            <td ngModel> {{ nota.dataNota}}</td>
+            <td ngModel > {{ nota.dataNota}}</td>
             <td ngModel> {{nota.valor}} </td> 
             <button  style="background:none; border:none!important; margin-left: -74%;" (click)="mostrarLista()"> <img style="height:30px; width:30px;" src="../../assets/vertical_three_points_580637.png"></button>  
         </tr>
