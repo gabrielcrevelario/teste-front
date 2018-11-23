@@ -13,7 +13,7 @@ import { SearchComponent } from './search/search.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MainComponent } from './main/main.component';
 import { routing } from './app-routing';
-import { NgxCurrencyModule } from "ngx-currency";
+import { CurrencyMaskModule } from "ng2-currency-mask";
 import { FidelityComponent } from './fidelity/fidelity.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule}   from '@angular/forms';
@@ -38,7 +38,7 @@ import { DashboardDetalhesComponent } from './dashboard-detalhes/dashboard-detal
     AppRoutingModule,
     FontAwesomeModule,
     routing,
-    NgxCurrencyModule,
+    CurrencyMaskModule,
     HttpClientModule,
     FormsModule
     

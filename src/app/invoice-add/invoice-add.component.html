@@ -35,7 +35,7 @@
         </div>
         <div class="payment2 col-sx-4  col-sm-3 col-md-3">
           <label><strong>Valor</strong></label>
-          <input name="valor"ngModel prefix="R$"  class="custom-select" type="text"  required >
+          <input currencyMask name="valor"ngModel prefix="R$"  class="custom-select" type="text"  [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" required >
         </div>
         </div>
         <div class="row button">
