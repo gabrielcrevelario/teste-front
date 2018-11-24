@@ -1,6 +1,6 @@
 # TesteFront
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
+Para iniciar a api fake usando o json server basta escrever json-server --watch db.json
 
 ## Development server
 
